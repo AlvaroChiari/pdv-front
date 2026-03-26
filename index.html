@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPC Estoques</title>
+    <link rel="icon" href="https://i.ibb.co/WpBS8Pm4/lpc.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://i.ibb.co/WpBS8Pm4/lpc.png" alt="Logo LPC" class="logo-sistema">
+        
+        <h2>Cadastrar Produto</h2>
+        
+        <div class="form-group">
+            <input type="text" id="nomeProduto" placeholder="Nome do Produto">
+            <input type="number" id="precoProduto" placeholder="Preço" step="0.01">
+            <input type="text" id="codigoBarras" placeholder="Código de Barras">
+            <input type="number" id="estoqueProduto" placeholder="Estoque">
+            
+            <button id="btnSalvar" onclick="salvarProduto()">Salvar</button>
+        </div>
+
+        <hr>
+
+        <h1>Estoque Atual</h1>
+        
+        <div style="margin-bottom: 20px;">
+            <input type="text" id="inputPesquisa" placeholder="🔍 Pesquisar por nome..." oninput="pesquisarProduto()" class="input-busca">
+        </div>
+
+        <button class="btn-secundario" onclick="carregarProdutos()">Atualizar</button>
+
+        <ul id="lista-produtos"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
